@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import VercelLogo from "~/assets/powered-by-vercel.svg?url";
 import PageContainer from "./PageContainer";
 import FooterSection from "./FooterSection.vue";
 import ExternalLink from "./ExternalLink.vue";
@@ -40,11 +39,6 @@ import version from "~/version";
         <LogoWithLabel class="mr-2" />
         <p className="mr-2">v{{ version }}</p>
         <p>by glaciyan</p>
-      </div>
-      <div class="mt-6">
-        <a href="https://vercel.com?utm_source=gscale&utm_campaign=oss">
-          <img :src="VercelLogo" width="212" height="44" alt="Powered by Vercel" />
-        </a>
       </div>
       <p className="mt-6 text-light-ternary">
         gscale.cc is not affiliated with COGNOSPHERE.
