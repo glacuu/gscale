@@ -6,12 +6,6 @@ GScale is a calculator for Genshin Impact, you can calculate the amount of items
 
 This project is built using Vue.
 
-<a href="https://vercel.com?utm_source=gscale&utm_campaign=oss">
-<img src="./src/assets/powered-by-vercel.svg"
-	width="212"
-	height="44">
-</a>
-
 ### Get started
 ```sh
 # you need to have pnpm installed
