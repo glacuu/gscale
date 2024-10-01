@@ -1,10 +1,9 @@
 import type Fuse from "fuse.js";
-import type { Ref } from "vue";
 import { IBaseCharacter } from "~/lib/data/contracts/IBaseCharacter";
 import { CharacterSearchModel, generateSearchModel } from "~/lib/types/CharacterSearchModel";
 
 export default function (search: Ref<string>, characters: IBaseCharacter[]) {
-  const result = ref<Fuse.FuseResult<CharacterSearchModel>[] | null>(null);
+  const result = ref<{item: CharacterSearchModel}[] | null>(null);
 
   const noResults = computed(() => {
     if (result.value?.length !== undefined && result.value?.length === 0) {
@@ -18,7 +17,7 @@ export default function (search: Ref<string>, characters: IBaseCharacter[]) {
 
   throttledWatch(
     search,
-    async (value) => {
+    async (value: string) => {
       if (fuse === undefined) {
         const Fuse = (await import("fuse.js")).default;
         const searchModel = characters.map((c) => generateSearchModel(c));

@@ -23,7 +23,7 @@ const placeholder = computed(() => {
 
 const characters = computed(() => {
   if (filteredCharacters.value && filteredCharacters.value.length > 0) {
-    return filteredCharacters.value.map((res) => res.item);
+    return filteredCharacters.value.map((res: any) => res.item);
   } else {
     return charactersViewModel;
   }
